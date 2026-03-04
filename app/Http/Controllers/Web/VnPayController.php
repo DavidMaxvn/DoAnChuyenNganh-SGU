@@ -9,8 +9,8 @@ class VnpayController extends Controller
 {
     private const VNP_URL         = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html';
     private const VNP_RETURN_URL  = '/vnpay/return'; 
-    private const VNP_TMN_CODE    = 'PYB0LHE2';
-    private const VNP_HASH_SECRET = 'DXN1SR5O0VF54D7TLWEPSE9CG0E3ESPW';
+    private const VNP_TMN_CODE    = '9B356UF8';
+    private const VNP_HASH_SECRET = '9LNWW09XJSAT2H6H89DA71Q0FD6O92NS';
 
     /**
      * GET /vnpay/create?amount=123000[&bankcode=NCB]

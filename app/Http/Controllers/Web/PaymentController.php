@@ -10,8 +10,8 @@ class PaymentController extends Controller
     public function vnpayPayment(){
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "http://127.0.0.1:8000/cartDetail";
-        $vnp_TmnCode = "QYK1E435";//Mã website tại VNPAY
-        $vnp_HashSecret = "GESBZFMUMCJTJRHPADHIWHQADOZBVWCE"; //Chuỗi bí mật
+        $vnp_TmnCode = "9B356UF8";//Mã website tại VNPAY
+        $vnp_HashSecret = "9LNWW09XJSAT2H6H89DA71Q0FD6O92NS"; //Chuỗi bí mật
 
         $vnp_TxnRef = '123'; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
         $vnp_OrderInfo = 'Thanh toan don hang test';

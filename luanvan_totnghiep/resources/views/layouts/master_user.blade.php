@@ -184,7 +184,7 @@
                                         <li><a href="{{ route('web.contact') }}">Liên hệ</a></li>
                                         <li>
                                             <a href="#" data-toggle="modal" data-target="#vegPrefModal" class="hb-menu-link">
-                                                🤖 AI Gợi ý mua sắm
+                                                Gợi ý mua sắm
                                             </a>
 
                                         </li>
