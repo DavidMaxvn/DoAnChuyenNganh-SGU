@@ -94,6 +94,11 @@ class OrderController extends Controller
             }
         }
 
+        // payment vnpay: tạo đơn trước, sau đó mới chuyển qua cổng thanh toán
+        if (!empty($dataOrder['payment_type']) && strtoupper($dataOrder['payment_type']) == 'ONLINE') {
+            return redirect()->route('web.vnpay.create', ['order_id' => $orderId]);
+        }
+
         try {
             Mail::send('emails.create_order', ['order' => $order], function ($mess) use ($order) {
                 $mess->to($order->User->email, 'Thông báo')->subject('[' . env('APP_NAME') . ']Thông báo đặt hàng thành công #' . $order->id);

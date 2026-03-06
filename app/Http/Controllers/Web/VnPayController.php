@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class VnpayController extends Controller
@@ -18,14 +19,22 @@ class VnpayController extends Controller
      */
     public function create(Request $request)
     {
-        $amount = (int) $request->query('amount', 0); // đơn vị VND
-        if ($amount <= 0) {
-            return back()->with('error', 'Số tiền không hợp lệ.');
+        $orderId = (int) $request->query('order_id', 0);
+        $order = Order::query()
+            ->where('id', $orderId)
+            ->where('user_id', auth('web')->id())
+            ->first();
+
+        if (!$order) {
+            return redirect()->route('web.error.order')->with('error', 'Không tìm thấy đơn hàng để thanh toán.');
         }
 
-        session(['vnp_return_to' => $request->headers->get('referer') ?? url('/')]);
+        $amount = (int) $order->total();
+        if ($amount <= 0) {
+            return redirect()->route('web.error.order')->with('error', 'Số tiền thanh toán không hợp lệ.');
+        }
 
-        $vnp_TxnRef     = (string) mt_rand(100000, 999999);
+        $vnp_TxnRef     = (string) $order->id;
         $vnp_OrderInfo  = 'Thanh toán đơn hàng';
         $vnp_OrderType  = 'billpayment';
         $vnp_Amount     = $amount * 100; 
@@ -82,18 +91,27 @@ class VnpayController extends Controller
         }
         $myHash = hash_hmac('sha512', implode('&', $hashPieces), self::VNP_HASH_SECRET);
 
-        $returnTo = session('vnp_return_to', url('/'));
-        session()->forget('vnp_return_to');
-
-        if (!hash_equals($myHash, $vnp_SecureHash)) {
-            return redirect()->to($returnTo)->with('error', 'Chữ ký không hợp lệ!');
-        }
-
+        // Lấy orderId từ vnp_TxnRef
+        $orderId = $request->query('vnp_TxnRef');
         $code = $request->query('vnp_ResponseCode'); // '00' = Thành công
-        if ($code === '00') {
-            return redirect()->to($returnTo)->with('success', 'Thanh toán VNPAY thành công!');
+
+        // Kiểm tra chữ ký
+        if (!hash_equals($myHash, $vnp_SecureHash)) {
+            return redirect()->route('web.error.order')->with('error', 'Chữ ký không hợp lệ!');
         }
 
-        return redirect()->to($returnTo)->with('error', 'Thanh toán thất bại/đã hủy (mã: ' . $code . ').');
+        // Cập nhật trạng thái thanh toán nếu thành công
+        if ($code === '00' && $orderId) {
+            \DB::table('orders')
+                ->where('id', $orderId)
+                ->update([
+                    'payment_status' => 'PAID',
+                    'payment_response' => json_encode($params),
+                    'success_at' => now(),
+                ]);
+            return redirect()->route('web.success.order')->with('success', 'Thanh toán VNPAY thành công!');
+        }
+
+        return redirect()->route('web.error.order')->with('error', 'Thanh toán thất bại/đã hủy (mã: ' . $code . ').');
     }
 }

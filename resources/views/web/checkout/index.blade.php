@@ -179,12 +179,11 @@
                                 </div>
 
                                 <div class="order-button-payment align-items-center gap-2">
-                                    <a id="btn-vnpay" class="btn btn-primary d-none w-100"
-                                        data-vnp-base="{{ route('web.vnpay.create') }}">
+                                    <button id="btn-vnpay" class="btn btn-primary d-none w-100" type="submit"
+                                        form="form-main">
                                         <img style="width: 50px;" src="{{ asset('images/vnpay.png') }}">
                                         <span class="fw-bold text-light">THANH TOÁN VNPAY</span>
-                                    </a>
-
+                                    </button>
                                 </div>
 
                                 <div class="order-button-payment">
@@ -266,56 +265,12 @@
             toggleVnpButton(); // chạy lần đầu (khi reload trang có sẵn giá trị)
             $paymentSelect.on('change', toggleVnpButton);
 
-            // Click VNPAY: đổi action tạm thời rồi submit form
-            var originalAction = $form.attr('action');
+            // Đảm bảo submit VNPay luôn gửi đúng payment_type
             $btnVnp.on('click', function() {
-                var vnpAction = $(this).data('vnp-action');
-
-                // Bảo đảm select đang là ONLINE
                 if ($paymentSelect.val() !== 'ONLINE') {
-                    $paymentSelect.val('ONLINE').trigger('change');
+                    $paymentSelect.val('ONLINE');
                 }
-
-                // Gửi form sang VNPAY
-                $form.attr('action', vnpAction);
-                $form.trigger('submit');
-
-                // (tuỳ chọn) đặt lại action cũ sau 1 tick
-                setTimeout(function() {
-                    $form.attr('action', originalAction);
-                }, 0);
             });
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var $selPay = $('select[name="payment_type"][form="form-main"]');
-            var $btnVnp = $('#btn-vnpay');
-
-            function getTotal() {
-                var t = $('.order-total.total span').text() || '';
-                return parseInt(t.replace(/[^\d]/g, '') || '0', 10);
-            }
-
-            function updateHref() {
-                var base = $btnVnp.data('vnp-base');
-                $btnVnp.attr('href', base + '?amount=' + getTotal());
-            }
-
-            function toggleBtn() {
-                if ($selPay.val() === 'ONLINE') {
-                    $btnVnp.removeClass('d-none');
-                    updateHref();
-                } else {
-                    $btnVnp.addClass('d-none');
-                }
-            }
-
-            toggleBtn();
-            $selPay.on('change', toggleBtn);
-            // Mỗi lần rê/nhấn cập nhật lại phòng khi user vừa đổi voucher/ship
-            $btnVnp.on('mouseenter focus', updateHref);
         });
     </script>
 @endsection

@@ -70,8 +70,6 @@ Route::group(['middleware' => ['auth:web', 'checkStatusUser']], function () {
 
     Route::post('create-order', [\App\Http\Controllers\Web\OrderController::class, 'createOrder'])->name('create.order');
     Route::get('checkout', [\App\Http\Controllers\Web\OrderController::class, 'checkOut'])->name('checkout.order');
-    Route::get('order-success', [\App\Http\Controllers\Web\OrderController::class, 'success'])->name('success.order');
-    Route::get('order-error', [\App\Http\Controllers\Web\OrderController::class, 'error'])->name('error.order');
 
     Route::get('profile', [\App\Http\Controllers\Web\ProfileController::class, 'showFormProfile'])->name('profile');
     Route::post('profile/{id}', [\App\Http\Controllers\Web\ProfileController::class, 'profile'])->name('profile.post');
@@ -82,5 +80,9 @@ Route::group(['middleware' => ['auth:web', 'checkStatusUser']], function () {
     Route::post('order/{id}', [\App\Http\Controllers\Web\OrderController::class, 'updateStatusOrder'])->name('order_update_status');
 
     Route::get('vnpay/create', [\App\Http\Controllers\Web\VnpayController::class, 'create'])->name('vnpay.create');
-    Route::get('/vnpay/return', [\App\Http\Controllers\Web\VnpayController::class, 'return'])->name('vnpay.return');
 });
+
+// Các route không cần middleware auth:web, checkStatusUser
+Route::get('order-success', [\App\Http\Controllers\Web\OrderController::class, 'success'])->name('success.order');
+Route::get('order-error', [\App\Http\Controllers\Web\OrderController::class, 'error'])->name('error.order');
+Route::get('/vnpay/return', [\App\Http\Controllers\Web\VnpayController::class, 'return'])->name('vnpay.return');
