@@ -1,10 +1,10 @@
-# Bao Cao Vibe Coding 6 Chang
+# Bao Cao Vibe Coding 7 Chang
 
 ## 1. Muc tieu cua README nay
 
 README nay la ban bao cao tong hop de dua len GitHub cho do an website sieu thi ban do an co AI goi y.
 
-Toi khong trinh bay du an theo qua nhieu chang nho, vi cach do khong thuc te cho bao cao va khong thuan tien neu muon push GitHub theo tung moc phat trien. Thay vao do, toi rut gon toan bo qua trinh thanh 6 chang lon, du ro de bao ve do an va du thuc te de gan voi commit/tag tren GitHub.
+Toi khong trinh bay du an theo qua nhieu chang nho, vi cach do khong thuc te cho bao cao va khong thuan tien neu muon push GitHub theo tung moc phat trien. Thay vao do, toi rut gon toan bo qua trinh thanh 7 chang lon, du ro de bao ve do an va du thuc te de gan voi commit/tag tren GitHub.
 
 Moi chang trong README nay deu ghi ro:
 
@@ -13,7 +13,7 @@ Moi chang trong README nay deu ghi ro:
 - nhom file va code quan trong duoc tao ra
 - ket qua kiem thu cua chang do trong repo hien tai
 
-## 2. Tom tat 6 chang
+## 2. Tom tat 7 chang
 
 | Chang | Noi dung | Trang thai kiem thu hien co |
 | --- | --- | --- |
@@ -23,8 +23,9 @@ Moi chang trong README nay deu ghi ro:
 | 4 | User auth, profile, quen mat khau, social login | `php artisan test --filter=Stage04` -> `9 passed` |
 | 5 | Gio hang, checkout, don hang, thanh toan | `php artisan test --filter=Stage05` -> `7 passed` |
 | 6 | Tracking, analytics, AI dashboard va AI goi y | `php artisan test --filter=Stage06` -> `8 passed` |
+| 7 | Microservices cho inventory, pricing, checkout orchestration va outbox | `php artisan test --filter=Stage07` -> `5 passed` |
 
-## 3. Cach toi chia 6 chang
+## 3. Cach toi chia 7 chang
 
 Toi chia du an theo logic mot website sieu thi ban do an di tu MVP den san pham co AI:
 
@@ -34,8 +35,9 @@ Toi chia du an theo logic mot website sieu thi ban do an di tu MVP den san pham 
 4. Them tai khoan nguoi dung de dinh danh va ca nhan hoa.
 5. Mo rong thanh luong mua hang day du: gio hang, checkout, order, payment.
 6. Them tracking, analytics va AI de toi uu van hanh va trai nghiem mua sam.
+7. Them lop microservices de tach bien inventory, pricing, checkout orchestration va outbox event.
 
-Day la 6 chang gon, thuc te, du de viet bao cao va cung du de tach commit/tag tren GitHub.
+Day la 7 chang gon, thuc te, du de viet bao cao va cung du de tach commit/tag tren GitHub.
 
 ## 4. Chang 1: Khoi tao Laravel, admin auth va product core
 
@@ -583,9 +585,104 @@ Trang thai kiem thu cua chang 6 trong README nay:
 
 - da co suite test rieng cho tracking, analytics, AI dashboard, AI suggestion va command
 
-## 10. Tong ket ket qua kiem thu hien co
+## 10. Chang 7: Microservices cho inventory, pricing, checkout orchestration va outbox
 
-Toi da co kiem thu tu dong tach rieng cho ca 6 chang:
+### Muc tieu
+
+Toi dung chang 7 de them lop microservices co tinh thuc tien vao he thong da hoan chinh:
+
+- tach logic ton kho thanh Inventory Service
+- tach logic tinh tien thanh Pricing Service
+- tao Checkout Orchestrator de dieu phoi cac service
+- them Outbox Event de chuan bi cho async/event-driven architecture
+- giu Laravel monolith van chay duoc, nhung code duoc to chuc theo service boundary de sau nay tach service doc lap
+
+### Prompt hyper-specific toi da nhap
+
+```text
+Hay xay chang 7 cho project Laravel 9 sieu thi ban do an, build tren chang 6.
+Toi can them microservices co tinh thuc tien, khong chi viet ly thuyet.
+
+Pham vi:
+- van giu project Laravel hien tai chay duoc
+- them service boundary theo kieu microservices
+- UI coi nhu da co san
+- backend tra JSON
+
+Microservices can co:
+- Inventory Service: kiem tra ton kho kha dung va reserve hang truoc checkout
+- Pricing Service: tinh subtotal, shipping fee, coupon discount va grand total
+- Checkout Orchestrator: goi Pricing Service, Inventory Service va ghi event
+- Outbox Service: luu event de sau nay co the dispatch async sang service khac
+
+Bang du lieu moi:
+- `inventory_reservations`
+- `microservice_outbox_events`
+
+Endpoint:
+- `GET /vibe/stage-07/microservices/overview`
+- `POST /vibe/stage-07/microservices/inventory/check`
+- `POST /vibe/stage-07/microservices/pricing/quote`
+- `POST /vibe/stage-07/microservices/checkout/simulate`
+- `GET /vibe/stage-07/microservices/outbox`
+
+Nghiep vu:
+- inventory check phai tru ton kho da bi reserve nhung chua het han
+- reserve tao reservation group, reservation code va het han sau 15 phut
+- pricing phai lay gia product, phi ship city va coupon hien co
+- checkout simulation phai tao correlation_id de trace qua nhieu service
+- moi service quan trong phai ghi event vao outbox
+- neu ton kho khong du thi checkout simulation tra loi 422
+
+Kien truc:
+- route rieng cho Stage07
+- controller mong, chi nhan request va tra response
+- request validation rieng cho inventory, pricing va checkout simulation
+- service rieng cho inventory, pricing, checkout orchestrator va outbox
+- feature test cho cac luong chinh
+```
+
+### File va code quan trong
+
+- `routes/vibe_stage_07_microservices.php`
+- `database/migrations/2026_04_22_000001_create_inventory_reservations_table.php`
+- `database/migrations/2026_04_22_000002_create_microservice_outbox_events_table.php`
+- `app/Http/Controllers/Vibe/Stage07/MicroserviceController.php`
+- `app/Http/Requests/Vibe/Stage07/InventoryCheckRequest.php`
+- `app/Http/Requests/Vibe/Stage07/PricingQuoteRequest.php`
+- `app/Http/Requests/Vibe/Stage07/CheckoutSimulationRequest.php`
+- `app/Services/Vibe/Stage07/InventoryMicroservice.php`
+- `app/Services/Vibe/Stage07/PricingMicroservice.php`
+- `app/Services/Vibe/Stage07/CheckoutOrchestratorService.php`
+- `app/Services/Vibe/Stage07/MicroserviceOutboxService.php`
+- `tests/Concerns/CreatesStage07Schema.php`
+- `tests/Feature/Vibe/Stage07/MicroserviceArchitectureTest.php`
+
+### Ket qua kiem thu
+
+Lenh da chay:
+
+```bash
+php artisan test --filter=Stage07
+```
+
+Ket qua:
+
+- `5 passed`
+
+Noi dung da duoc kiem thu:
+
+- overview mo ta dung cac service boundary
+- Inventory Service tru ton kho dang reserve ra khoi available stock
+- Pricing Service tinh subtotal, shipping fee, coupon discount va grand total
+- Pricing Service ghi event `pricing.quoted` vao outbox
+- Checkout Orchestrator goi pricing, inventory va outbox bang cung `correlation_id`
+- checkout simulation tao inventory reservation
+- checkout simulation bi tu choi khi ton kho khong du
+
+## 11. Tong ket ket qua kiem thu hien co
+
+Toi da co kiem thu tu dong tach rieng cho ca 7 chang:
 
 ```bash
 php artisan test --filter=Stage01
@@ -594,6 +691,7 @@ php artisan test --filter=Stage03
 php artisan test --filter=Stage04
 php artisan test --filter=Stage05
 php artisan test --filter=Stage06
+php artisan test --filter=Stage07
 ```
 
 Ket qua da xac nhan:
@@ -604,10 +702,11 @@ Ket qua da xac nhan:
 - Stage04: `9 passed`
 - Stage05: `7 passed`
 - Stage06: `8 passed`
+- Stage07: `5 passed`
 
-## 11. Cach push GitHub theo 6 chang
+## 12. Cach push GitHub theo 7 chang
 
-Neu toi muon push repo theo 6 chang thuc te hon, toi se dung 6 moc commit/tag sau:
+Neu toi muon push repo theo 7 chang thuc te hon, toi se dung 7 moc commit/tag sau:
 
 - `stage-01-foundation-admin-product-core`
 - `stage-02-product-modeling`
@@ -615,17 +714,19 @@ Neu toi muon push repo theo 6 chang thuc te hon, toi se dung 6 moc commit/tag sa
 - `stage-04-user-account`
 - `stage-05-cart-checkout-order-payment`
 - `stage-06-tracking-analytics-ai`
+- `stage-07-microservices`
 
 Voi cach chia nay, README, bao cao do an va lich su GitHub se thong nhat voi nhau.
 
-## 12. Ket luan
+## 13. Ket luan
 
-Toi trinh bay du an nay thanh 6 chang vi day la cach gon hon, sat thuc te hon va de bao ve hon:
+Toi trinh bay du an nay thanh 7 chang vi day la cach gon hon, sat thuc te hon va de bao ve hon:
 
 - 4 chang dau da duoc tach slice rieng, co test tu dong va co endpoint stage ro rang
 - 2 chang cuoi da duoc tach suite test rieng, bao phu luong mua hang va luong tracking/analytics/AI
+- chang 7 bo sung microservices co logic thuc te, gan voi checkout, inventory, pricing va outbox event
 
 Neu can mo rong tiep, toi se uu tien lam them:
 
-- mo rong test Stage06 theo huong performance/load va fallback AI nang cao
-- tag GitHub theo dung 6 chang trong README nay
+- mo rong Stage07 theo huong service token, queue worker va API gateway
+- tag GitHub theo dung 7 chang trong README nay

@@ -43,6 +43,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
+            Route::prefix('vibe/stage-07/microservices')
+                ->name('vibe.stage07.microservices.')
+                ->middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/vibe_stage_07_microservices.php'));
+
             Route::middleware('web')
                 ->name('web.')
                 ->namespace($this->namespace)
