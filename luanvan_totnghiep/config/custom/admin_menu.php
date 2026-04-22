@@ -94,7 +94,7 @@ return [
         ]
     ],
     [
-        'title' => 'Quản lý quản trị viên',
+        'title' => 'Quản lý nhân viên',
         'icon' => '<i class="bi bi-menu-button-wide"></i>',
         'list_child' => [
             [

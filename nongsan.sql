@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2025 at 08:21 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Apr 09, 2026 at 03:48 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -695,7 +695,154 @@ INSERT INTO `activity_logs` (`id`, `activity_type`, `user_id`, `product_id`, `se
 (647, 'purchase', 8, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', '2025-12-30 07:02:45', '2025-12-30 07:02:45'),
 (648, 'purchase', 8, 15, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', '2025-12-30 07:02:45', '2025-12-30 07:02:45'),
 (649, 'search', 8, NULL, 'cas', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', '2025-12-30 07:03:25', '2025-12-30 07:03:25'),
-(650, 'search', 8, NULL, 'ca', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', '2025-12-30 07:03:32', '2025-12-30 07:03:32');
+(650, 'search', 8, NULL, 'ca', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', '2025-12-30 07:03:32', '2025-12-30 07:03:32'),
+(651, 'view', NULL, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-02-16 03:10:21', '2026-02-16 03:10:21'),
+(652, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:55:48', '2026-03-04 06:55:48'),
+(653, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:55:51', '2026-03-04 06:55:51'),
+(654, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:07', '2026-03-04 06:56:07'),
+(655, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:24', '2026-03-04 06:56:24'),
+(656, 'view', 9, 16, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:28', '2026-03-04 06:56:28'),
+(657, 'add_to_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:33', '2026-03-04 06:56:33'),
+(658, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:36', '2026-03-04 06:56:36'),
+(659, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:56:42', '2026-03-04 06:56:42'),
+(660, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:58:04', '2026-03-04 06:58:04'),
+(661, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:58:04', '2026-03-04 06:58:04'),
+(662, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:58:04', '2026-03-04 06:58:04'),
+(663, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 06:58:04', '2026-03-04 06:58:04'),
+(664, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:13', '2026-03-04 07:02:13'),
+(665, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:18', '2026-03-04 07:02:18'),
+(666, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:20', '2026-03-04 07:02:20'),
+(667, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:24', '2026-03-04 07:02:24'),
+(668, 'view', 9, 16, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:27', '2026-03-04 07:02:27'),
+(669, 'add_to_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:32', '2026-03-04 07:02:32'),
+(670, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:35', '2026-03-04 07:02:35'),
+(671, 'add_to_cart', 9, 12, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 07:02:39', '2026-03-04 07:02:39'),
+(672, 'remove_from_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 16:22:29', '2026-03-04 16:22:29'),
+(673, 'remove_from_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 16:22:30', '2026-03-04 16:22:30'),
+(674, 'remove_from_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 16:22:31', '2026-03-04 16:22:31'),
+(675, 'remove_from_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-04 16:22:32', '2026-03-04 16:22:32'),
+(676, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:02', '2026-03-06 02:49:02'),
+(677, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:09', '2026-03-06 02:49:09'),
+(678, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:13', '2026-03-06 02:49:13'),
+(679, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:20', '2026-03-06 02:49:20'),
+(680, 'view', 9, 16, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:24', '2026-03-06 02:49:24'),
+(681, 'add_to_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:29', '2026-03-06 02:49:29'),
+(682, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:33', '2026-03-06 02:49:33'),
+(683, 'add_to_cart', 9, 12, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 02:49:38', '2026-03-06 02:49:38'),
+(684, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 03:10:26', '2026-03-06 03:10:26'),
+(685, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 03:10:26', '2026-03-06 03:10:26'),
+(686, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 03:10:26', '2026-03-06 03:10:26'),
+(687, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', '2026-03-06 03:10:26', '2026-03-06 03:10:26'),
+(688, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:35:57', '2026-04-07 06:35:57'),
+(689, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:02', '2026-04-07 06:36:02'),
+(690, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:07', '2026-04-07 06:36:07'),
+(691, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:13', '2026-04-07 06:36:13'),
+(692, 'view', 9, 16, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:18', '2026-04-07 06:36:18'),
+(693, 'add_to_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:23', '2026-04-07 06:36:23'),
+(694, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:28', '2026-04-07 06:36:28'),
+(695, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:36:33', '2026-04-07 06:36:33'),
+(696, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:08', '2026-04-07 06:37:08'),
+(697, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:08', '2026-04-07 06:37:08'),
+(698, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:08', '2026-04-07 06:37:08'),
+(699, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:08', '2026-04-07 06:37:08'),
+(700, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:33', '2026-04-07 06:37:33'),
+(701, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:33', '2026-04-07 06:37:33'),
+(702, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:33', '2026-04-07 06:37:33'),
+(703, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:37:33', '2026-04-07 06:37:33'),
+(704, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:50:42', '2026-04-07 06:50:42'),
+(705, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:50:42', '2026-04-07 06:50:42'),
+(706, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:50:42', '2026-04-07 06:50:42'),
+(707, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:50:42', '2026-04-07 06:50:42'),
+(708, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:51:43', '2026-04-07 06:51:43'),
+(709, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:51:47', '2026-04-07 06:51:47'),
+(710, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:51:50', '2026-04-07 06:51:50'),
+(711, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:51:54', '2026-04-07 06:51:54'),
+(712, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:51:58', '2026-04-07 06:51:58'),
+(713, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:03', '2026-04-07 06:52:03'),
+(714, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:20', '2026-04-07 06:52:20'),
+(715, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:20', '2026-04-07 06:52:20'),
+(716, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:20', '2026-04-07 06:52:20'),
+(717, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:46', '2026-04-07 06:52:46'),
+(718, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:46', '2026-04-07 06:52:46'),
+(719, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:52:46', '2026-04-07 06:52:46'),
+(720, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:54:43', '2026-04-07 06:54:43'),
+(721, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:54:48', '2026-04-07 06:54:48'),
+(722, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:54:52', '2026-04-07 06:54:52'),
+(723, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:54:56', '2026-04-07 06:54:56'),
+(724, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:01', '2026-04-07 06:55:01'),
+(725, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:04', '2026-04-07 06:55:04'),
+(726, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:08', '2026-04-07 06:55:08'),
+(727, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:26', '2026-04-07 06:55:26'),
+(728, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:26', '2026-04-07 06:55:26'),
+(729, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:26', '2026-04-07 06:55:26'),
+(730, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:35', '2026-04-07 06:55:35'),
+(731, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:35', '2026-04-07 06:55:35'),
+(732, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 06:55:35', '2026-04-07 06:55:35'),
+(733, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:03:39', '2026-04-07 07:03:39'),
+(734, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:03:44', '2026-04-07 07:03:44'),
+(735, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:03:54', '2026-04-07 07:03:54'),
+(736, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:03:58', '2026-04-07 07:03:58'),
+(737, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:04:04', '2026-04-07 07:04:04'),
+(738, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:04:08', '2026-04-07 07:04:08'),
+(739, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:04:25', '2026-04-07 07:04:25'),
+(740, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:04:25', '2026-04-07 07:04:25'),
+(741, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:04:25', '2026-04-07 07:04:25'),
+(742, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:12:00', '2026-04-07 07:12:00'),
+(743, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:12:00', '2026-04-07 07:12:00'),
+(744, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:12:00', '2026-04-07 07:12:00'),
+(745, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:16:25', '2026-04-07 07:16:25'),
+(746, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:16:25', '2026-04-07 07:16:25'),
+(747, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:16:25', '2026-04-07 07:16:25'),
+(748, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:18:10', '2026-04-07 07:18:10'),
+(749, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:18:10', '2026-04-07 07:18:10'),
+(750, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:18:10', '2026-04-07 07:18:10'),
+(751, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:19:33', '2026-04-07 07:19:33'),
+(752, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:19:33', '2026-04-07 07:19:33'),
+(753, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 07:19:33', '2026-04-07 07:19:33'),
+(754, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:02', '2026-04-07 08:45:02'),
+(755, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:02', '2026-04-07 08:45:02'),
+(756, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:02', '2026-04-07 08:45:02'),
+(757, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:34', '2026-04-07 08:45:34');
+INSERT INTO `activity_logs` (`id`, `activity_type`, `user_id`, `product_id`, `search_query`, `quantity`, `ip_address`, `user_agent`, `created_at`, `updated_at`) VALUES
+(758, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:34', '2026-04-07 08:45:34'),
+(759, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:45:34', '2026-04-07 08:45:34'),
+(760, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:28', '2026-04-07 08:46:28'),
+(761, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:28', '2026-04-07 08:46:28'),
+(762, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:28', '2026-04-07 08:46:28'),
+(763, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:52', '2026-04-07 08:46:52'),
+(764, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:52', '2026-04-07 08:46:52'),
+(765, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 08:46:52', '2026-04-07 08:46:52'),
+(766, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:00:43', '2026-04-07 14:00:43'),
+(767, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:00:48', '2026-04-07 14:00:48'),
+(768, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:00:52', '2026-04-07 14:00:52'),
+(769, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:01:10', '2026-04-07 14:01:10'),
+(770, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:01:24', '2026-04-07 14:01:24'),
+(771, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:01:32', '2026-04-07 14:01:32'),
+(772, 'add_to_cart', 9, 12, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:01:37', '2026-04-07 14:01:37'),
+(773, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:01:46', '2026-04-07 14:01:46'),
+(774, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:02:34', '2026-04-07 14:02:34'),
+(775, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:02:34', '2026-04-07 14:02:34'),
+(776, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:02:39', '2026-04-07 14:02:39'),
+(777, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:02:39', '2026-04-07 14:02:39'),
+(778, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:04:00', '2026-04-07 14:04:00'),
+(779, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:04:05', '2026-04-07 14:04:05'),
+(780, 'remove_from_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:04:11', '2026-04-07 14:04:11'),
+(781, 'view', 9, 16, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:10:04', '2026-04-07 14:10:04'),
+(782, 'add_to_cart', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:10:09', '2026-04-07 14:10:09'),
+(783, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:10:25', '2026-04-07 14:10:25'),
+(784, 'purchase', 9, 16, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-07 14:10:44', '2026-04-07 14:10:44'),
+(785, 'view', 9, 13, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:07', '2026-04-08 00:55:07'),
+(786, 'add_to_cart', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:11', '2026-04-08 00:55:11'),
+(787, 'view', 9, 18, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:14', '2026-04-08 00:55:14'),
+(788, 'add_to_cart', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:17', '2026-04-08 00:55:17'),
+(789, 'view', 9, 12, NULL, NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:21', '2026-04-08 00:55:21'),
+(790, 'add_to_cart', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:26', '2026-04-08 00:55:26'),
+(791, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:54', '2026-04-08 00:55:54'),
+(792, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:54', '2026-04-08 00:55:54'),
+(793, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:54', '2026-04-08 00:55:54'),
+(794, 'purchase', 9, 12, NULL, 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:59', '2026-04-08 00:55:59'),
+(795, 'purchase', 9, 13, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:59', '2026-04-08 00:55:59'),
+(796, 'purchase', 9, 18, NULL, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', '2026-04-08 00:55:59', '2026-04-08 00:55:59');
 
 -- --------------------------------------------------------
 
@@ -719,10 +866,10 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `image`) VALUES
-(1, 'admin 1', 'admin1@gmail.com', '$2y$10$IzrVfoQpEcmv6ifL0JQlp.kGjpsCrr17ec4sazE9hq5agAL7lXG92', 'PfDm1dx5cAjF13ZKEACi7f2erh321sqZX89sP2b0zL35qV3qmTLWUqDiHwX9', NULL, '2024-04-05 04:23:29', 'admin_images/1/avatar.jpg'),
-(2, 'admin 2', 'admin2@gmail.com', '$2y$10$JxnRNFeZXaaydJNc4iBOeu5htzju.Id2r7zhY7Nzca6n1tJyzAA76', NULL, NULL, NULL, NULL),
-(3, 'admin 3', 'admin3@gmail.com', '$2a$12$hFVAqFevbKr1C96Y.ueBCeg72uDmc7Jhwy/wqn3XDgmfau8n4aCX2', NULL, NULL, NULL, NULL),
-(5, 'adminnew', 'adminnew@gmail.com', '$2y$10$XI3gUc1HO1bmXe/BBIcgTuxutHH.rhXnpKPCTx/.Dh6c11qA6G3Om', NULL, '2024-04-03 14:35:00', '2024-04-03 14:35:00', 'admin_images/5/avatar.png');
+(1, 'admin 1', 'admin1@gmail.com', '$2a$12$3IFXUFxZY6DtWLbdsesqse1uUZkxMm3sjYeXalmNP4RyX62Ea2I7m', 'PfDm1dx5cAjF13ZKEACi7f2erh321sqZX89sP2b0zL35qV3qmTLWUqDiHwX9', NULL, '2024-04-05 04:23:29', 'admin_images/1/avatar.jpg'),
+(2, 'admin 2', 'admin2@gmail.com', '$2a$12$3IFXUFxZY6DtWLbdsesqse1uUZkxMm3sjYeXalmNP4RyX62Ea2I7m', NULL, NULL, NULL, NULL),
+(3, 'admin 3', 'admin3@gmail.com', '$2a$12$3IFXUFxZY6DtWLbdsesqse1uUZkxMm3sjYeXalmNP4RyX62Ea2I7m', NULL, NULL, NULL, NULL),
+(5, 'adminnew', 'adminnew@gmail.com', '$2y$10$PS0HGbFYmycgowJfo6STTOHulerPt9WObEw8R6U5d5FL/4bKWAiWm', 'R7QeGxO1Tjd8CYTjiOaGMSGxHhGAPcykhfM3QUSgwHPwYBso4JWnitSvivdh', '2024-04-03 14:35:00', '2026-02-16 03:15:29', 'admin_images/5/avatar.webp');
 
 -- --------------------------------------------------------
 
@@ -765,15 +912,12 @@ CREATE TABLE `ai_suggestions` (
 --
 
 INSERT INTO `ai_suggestions` (`id`, `suggestion_type`, `product_id`, `title`, `description`, `action_recommendation`, `metadata`, `priority`, `is_active`, `is_dismissed`, `dismissed_at`, `created_at`, `updated_at`) VALUES
-(1, 'pricing', 11, 'Giảm giá cho Cải bó xôi Organic 300gr', 'Tỷ lệ bỏ giỏ cao (70%) cho thấy giá có thể là rào cản. Giảm giá có thể tăng tỷ lệ chuyển đổi.', 'Giảm giá xuống 5,000 VNĐ hoặc khuyến mãi 10% cho đơn hàng đầu tiên.', '{\"ai_generated\":true,\"reasoning\":\"Gi\\u1ea3m t\\u1ef7 l\\u1ec7 b\\u1ecf gi\\u1ecf s\\u1ebd gi\\u00fap t\\u0103ng doanh thu.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 3, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(2, 'inventory', 14, 'Xả hàng Thịt heo ba chỉ', 'Tồn kho thấp (11 sản phẩm) nhưng không có lượt xem và mua hàng. Cần xả hàng để tránh lãng phí.', 'Chạy chương trình khuyến mãi hoặc bundle với sản phẩm khác.', '{\"ai_generated\":true,\"reasoning\":\"Gi\\u1ea3i ph\\u00f3ng kho v\\u00e0 t\\u0103ng doanh thu t\\u1eeb s\\u1ea3n ph\\u1ea9m kh\\u00e1c.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(3, 'trending', 12, 'Tăng cường quảng bá cho ớt', 'Sản phẩm ớt có tỷ lệ chuyển đổi cao (8.06%) và lượt xem tăng trưởng mạnh (207%).', 'Tăng stock và chạy quảng cáo trên mạng xã hội.', '{\"ai_generated\":true,\"reasoning\":\"T\\u1eadn d\\u1ee5ng xu h\\u01b0\\u1edbng \\u0111\\u1ec3 t\\u0103ng doanh thu.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(4, 'combo', 11, 'Khuyến mãi combo Cải bó xôi và Cá Lóc', 'Sản phẩm thường được mua cùng nhau. Tạo combo có thể khuyến khích mua sắm nhiều hơn.', 'Giảm giá combo khi mua cả hai sản phẩm.', '{\"ai_generated\":true,\"reasoning\":\"T\\u0103ng gi\\u00e1 tr\\u1ecb \\u0111\\u01a1n h\\u00e0ng v\\u00e0 gi\\u1ea3m t\\u1ef7 l\\u1ec7 b\\u1ecf gi\\u1ecf.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(5, 'trending', 13, 'Tăng cường quảng bá cho Cá Lóc Tươi Sống', 'Cá Lóc có lượt xem thấp nhưng là sản phẩm có tiềm năng. Cần tăng cường quảng bá.', 'Chạy quảng cáo và khuyến mãi cho sản phẩm này.', '{\"ai_generated\":true,\"reasoning\":\"T\\u0103ng l\\u01b0\\u1ee3t xem v\\u00e0 doanh thu t\\u1eeb s\\u1ea3n ph\\u1ea9m c\\u00f3 ti\\u1ec1m n\\u0103ng.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(6, 'pricing', 19, 'Giảm giá cho Sữa dinh dưỡng Dutch Lady', 'Sản phẩm không có lượt xem và mua hàng. Cần điều chỉnh giá để thu hút khách hàng.', 'Giảm giá xuống 400,000 VNĐ hoặc khuyến mãi cho đơn hàng đầu tiên.', '{\"ai_generated\":true,\"reasoning\":\"Gi\\u1ea3m gi\\u00e1 c\\u00f3 th\\u1ec3 thu h\\u00fat kh\\u00e1ch h\\u00e0ng v\\u00e0 t\\u0103ng doanh thu.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 3, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(7, 'trending', 18, 'Tăng cường quảng bá cho Cà chua 300g', 'Sản phẩm không có lượt xem và mua hàng. Cần tăng cường quảng bá để thu hút khách hàng.', 'Chạy quảng cáo và khuyến mãi cho sản phẩm này.', '{\"ai_generated\":true,\"reasoning\":\"T\\u0103ng l\\u01b0\\u1ee3t xem v\\u00e0 doanh thu t\\u1eeb s\\u1ea3n ph\\u1ea9m c\\u00f3 ti\\u1ec1m n\\u0103ng.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(8, 'combo', 12, 'Khuyến mãi combo ớt và Cà Lóc', 'Sản phẩm ớt và Cá Lóc thường được mua cùng nhau. Tạo combo có thể khuyến khích mua sắm nhiều hơn.', 'Giảm giá combo khi mua cả hai sản phẩm.', '{\"ai_generated\":true,\"reasoning\":\"T\\u0103ng gi\\u00e1 tr\\u1ecb \\u0111\\u01a1n h\\u00e0ng v\\u00e0 gi\\u1ea3m t\\u1ef7 l\\u1ec7 b\\u1ecf gi\\u1ecf.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01'),
-(9, 'trending', 14, 'Tăng cường quảng bá cho Thịt heo xay C.P', 'Sản phẩm có tỷ lệ chuyển đổi cao nhưng lượt xem thấp. Cần tăng cường quảng bá.', 'Chạy quảng cáo và khuyến mãi cho sản phẩm này.', '{\"ai_generated\":true,\"reasoning\":\"T\\u0103ng l\\u01b0\\u1ee3t xem v\\u00e0 doanh thu t\\u1eeb s\\u1ea3n ph\\u1ea9m c\\u00f3 ti\\u1ec1m n\\u0103ng.\",\"generated_at\":\"2025-12-30 13:58:01\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2025-12-30 06:58:01', '2025-12-30 06:58:01');
+(1, 'pricing', 19, 'Giảm giá cho sản phẩm sữa dinh dưỡng', 'Sản phẩm sữa dinh dưỡng ít đường không có lượt xem và đơn hàng. Cần xem xét giảm giá để thu hút khách hàng.', 'Giảm giá sản phẩm xuống 10-15% trong 2 tuần tới.', '{\"ai_generated\":true,\"reasoning\":\"Gi\\u00e1 cao c\\u00f3 th\\u1ec3 l\\u00e0 nguy\\u00ean nh\\u00e2n khi\\u1ebfn kh\\u00e1ch h\\u00e0ng kh\\u00f4ng quan t\\u00e2m \\u0111\\u1ebfn s\\u1ea3n ph\\u1ea9m n\\u00e0y.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 3, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08'),
+(2, 'inventory', 14, 'Xả hàng thịt heo ba chỉ', 'Sản phẩm thịt heo ba chỉ có tồn kho thấp nhưng không có lượt xem hay đơn hàng. Cần xem xét xả hàng.', 'Chạy chương trình khuyến mãi cho sản phẩm này trong tuần tới.', '{\"ai_generated\":true,\"reasoning\":\"C\\u1ea7n gi\\u1ea3m t\\u1ed3n kho v\\u00e0 t\\u0103ng doanh thu cho s\\u1ea3n ph\\u1ea9m kh\\u00f4ng b\\u00e1n ch\\u1ea1y.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08'),
+(3, 'combo', 12, 'Gợi ý combo ớt và cá lóc', 'Sản phẩm ớt và cá lóc tươi sống thường được mua cùng nhau. Tạo combo để khuyến khích khách hàng mua sắm.', 'Tạo combo ớt + cá lóc với giá ưu đãi trong 1 tháng.', '{\"ai_generated\":true,\"reasoning\":\"K\\u1ebft h\\u1ee3p s\\u1ea3n ph\\u1ea9m c\\u00f3 th\\u1ec3 t\\u0103ng doanh thu v\\u00e0 gi\\u1ea3m t\\u1ef7 l\\u1ec7 b\\u1ecf gi\\u1ecf.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08'),
+(4, 'trending', 13, 'Tăng cường quảng bá cá lóc tươi sống', 'Cá lóc tươi sống có tỷ lệ chuyển đổi cao nhưng lượt xem thấp. Cần tăng cường quảng bá.', 'Chạy quảng cáo trên mạng xã hội cho sản phẩm này trong 2 tuần tới.', '{\"ai_generated\":true,\"reasoning\":\"S\\u1ea3n ph\\u1ea9m c\\u00f3 ti\\u1ec1m n\\u0103ng cao nh\\u01b0ng c\\u1ea7n \\u0111\\u01b0\\u1ee3c nhi\\u1ec1u ng\\u01b0\\u1eddi bi\\u1ebft \\u0111\\u1ebfn h\\u01a1n.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 3, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08'),
+(5, 'trending', 12, 'Tăng cường quảng bá ớt', 'Ớt có tỷ lệ chuyển đổi cao nhưng lượt xem thấp. Cần tăng cường quảng bá.', 'Chạy quảng cáo cho sản phẩm ớt trong 2 tuần tới.', '{\"ai_generated\":true,\"reasoning\":\"S\\u1ea3n ph\\u1ea9m c\\u00f3 ti\\u1ec1m n\\u0103ng cao nh\\u01b0ng c\\u1ea7n \\u0111\\u01b0\\u1ee3c nhi\\u1ec1u ng\\u01b0\\u1eddi bi\\u1ebft \\u0111\\u1ebfn h\\u01a1n.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 2, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08'),
+(6, 'inventory', 15, 'Kiểm tra tồn kho thịt heo xay', 'Thịt heo xay có tồn kho cao nhưng không có lượt xem hay đơn hàng. Cần xem xét tình trạng này.', 'Xem xét giảm giá hoặc khuyến mãi cho sản phẩm này.', '{\"ai_generated\":true,\"reasoning\":\"C\\u1ea7n c\\u1ea3i thi\\u1ec7n t\\u00ecnh h\\u00ecnh b\\u00e1n h\\u00e0ng cho s\\u1ea3n ph\\u1ea9m kh\\u00f4ng b\\u00e1n ch\\u1ea1y.\",\"generated_at\":\"2026-04-08 07:31:08\",\"model\":\"ChatGPT\"}', 1, 1, 0, NULL, '2026-04-08 00:31:08', '2026-04-08 00:31:08');
 
 -- --------------------------------------------------------
 
@@ -1146,12 +1290,36 @@ INSERT INTO `orders` (`id`, `note`, `user_id`, `address`, `phone`, `payment_type
 (9013, NULL, 4, 'Test Address', '0123456789', 'COD', 'SUCCESS', '2025-12-05 18:11:20', '2025-12-24 18:11:20', 'Test User', 'test@example.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 30000),
 (9014, NULL, 2, 'Test Address', '0123456789', 'COD', 'SUCCESS', '2025-12-14 18:11:20', '2025-12-11 18:11:20', 'Test User', 'test@example.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 30000),
 (9015, NULL, 2, 'Test Address', '0123456789', 'COD', 'SUCCESS', '2025-11-27 18:11:20', '2025-12-14 18:11:20', 'Test User', 'test@example.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 30000),
+(3681538620652046, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'SUCCESS', '2026-04-08 00:55:59', '2026-04-08 00:58:49', 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'PAID', NULL, '2026-04-08', NULL, NULL, NULL, NULL, 1, 20000),
 (7916005423390427, 'r', 7, 'khu pho 3 an phu quan 2', '0364877525', 'COD', 'PENDING', '2025-12-30 06:32:13', NULL, 'demo098765', 'demo098765@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 2, 46000),
+(12702907758616952, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:52:46', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(26457241564692072, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:50:42', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(29270104857428188, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'SUCCESS', '2026-03-04 06:58:04', '2026-03-06 02:45:25', 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'PAID', NULL, '2026-03-06', NULL, NULL, NULL, NULL, 1, 20000),
+(32641555907183580, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:52:20', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(38571604515647108, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-03-06 03:10:26', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'PAID', '{\"vnp_Amount\":\"27800000\",\"vnp_BankCode\":\"NCB\",\"vnp_BankTranNo\":\"VNP15440279\",\"vnp_CardType\":\"ATM\",\"vnp_OrderInfo\":\"Thanh to\\u00e1n \\u0111\\u01a1n h\\u00e0ng\",\"vnp_PayDate\":\"20260306101041\",\"vnp_ResponseCode\":\"00\",\"vnp_TmnCode\":\"9B356UF8\",\"vnp_TransactionNo\":\"15440279\",\"vnp_TransactionStatus\":\"00\",\"vnp_TxnRef\":\"38571604515647108\"}', '2026-03-06', NULL, NULL, NULL, NULL, 1, 20000),
+(46179260022088780, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 07:04:25', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(50754869595063550, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 07:18:10', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (52861222658251035, 'a', 8, 'khu pho 3 an phu quan 2', '0364877525', 'ONLINE', 'SUCCESS', '2025-12-30 07:02:45', '2025-12-30 07:06:53', 'demo7788', 'demo7788@gmail.com', 'PAID', NULL, '2025-12-30', NULL, '23555', NULL, NULL, 1, 20000),
+(56228909934804746, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 08:45:34', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(63312718431400053, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 07:19:33', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(81598341265511040, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 07:12:00', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (87584696326032840, NULL, 5, '3/2 quan 10', '0912345678', 'COD', 'PENDING', '2025-12-30 03:38:00', NULL, 'Đỗ Anh Đài', 'doanhdaigr5.2004@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 2, 46000),
+(88631953407886984, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 08:46:52', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(92881667464773072, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 08:46:28', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(95110858300696862, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:55:26', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(98935113094891010, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 07:16:25', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(102000630068059326, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:37:33', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(107701074447936700, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 14:10:25', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (116579538798324060, 'dsfg', 7, 'demotknew', '0364877527', 'COD', 'PENDING', '2025-12-30 06:45:34', NULL, 'demo098765', 'demo098765@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(141349892723167527, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'PENDING', '2026-04-07 14:02:39', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(150388176938589324, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 06:37:08', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
 (152447728075946880, 'rghfhgfgh', 7, 'khu pho 3 an phu quan 2', '0364877525', 'COD', 'PENDING', '2025-12-30 06:32:48', NULL, 'demo098765', 'demo098765@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 2, 46000),
-(152703778356786225, NULL, 5, '3/2 quan 10', '0912345678', 'COD', 'PENDING', '2025-12-30 03:35:25', NULL, 'Đỗ Anh Đài', 'doanhdaigr5.2004@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 2, 46000);
+(152703778356786225, NULL, 5, '3/2 quan 10', '0912345678', 'COD', 'PENDING', '2025-12-30 03:35:25', NULL, 'Đỗ Anh Đài', 'doanhdaigr5.2004@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 2, 46000),
+(155795668225711764, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'PENDING', '2026-04-08 00:55:54', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(156066633855692865, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'PENDING', '2026-04-07 06:55:35', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(171329665384231328, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'COD', 'PENDING', '2026-04-07 14:10:44', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(171443970038392802, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 08:45:02', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000),
+(175128987525392756, NULL, 9, '273 An Dương Vương p.3, q.5', '0993246149', 'ONLINE', 'PENDING', '2026-04-07 14:02:34', NULL, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', 'UNPAID', NULL, NULL, NULL, NULL, NULL, NULL, 1, 20000);
 
 -- --------------------------------------------------------
 
@@ -1197,8 +1365,30 @@ INSERT INTO `order_products` (`product_id`, `order_id`, `quantity`, `price`) VAL
 (12, 9013, 3, 2000),
 (12, 9014, 3, 2000),
 (12, 9015, 1, 2000),
+(12, 3681538620652046, 2, 2000),
+(12, 12702907758616952, 2, 2000),
+(12, 26457241564692072, 2, 2000),
+(12, 29270104857428188, 2, 2000),
+(12, 32641555907183580, 2, 2000),
+(12, 38571604515647108, 2, 2000),
+(12, 46179260022088780, 2, 2000),
+(12, 50754869595063550, 2, 2000),
+(12, 56228909934804746, 2, 2000),
+(12, 63312718431400053, 2, 2000),
+(12, 81598341265511040, 2, 2000),
 (12, 87584696326032840, 2, 2000),
+(12, 88631953407886984, 2, 2000),
+(12, 92881667464773072, 2, 2000),
+(12, 95110858300696862, 2, 2000),
+(12, 98935113094891010, 2, 2000),
+(12, 102000630068059326, 2, 2000),
+(12, 141349892723167527, 2, 2000),
+(12, 150388176938589324, 2, 2000),
 (12, 152703778356786225, 2, 2000),
+(12, 155795668225711764, 2, 2000),
+(12, 156066633855692865, 2, 2000),
+(12, 171443970038392802, 2, 2000),
+(12, 175128987525392756, 2, 2000),
 (13, 9001, 1, 130000),
 (13, 9002, 1, 130000),
 (13, 9003, 2, 130000),
@@ -1211,11 +1401,60 @@ INSERT INTO `order_products` (`product_id`, `order_id`, `quantity`, `price`) VAL
 (13, 9010, 1, 130000),
 (13, 9011, 1, 130000),
 (13, 9015, 2, 130000),
+(13, 3681538620652046, 1, 130000),
+(13, 12702907758616952, 1, 130000),
+(13, 26457241564692072, 1, 130000),
+(13, 29270104857428188, 1, 130000),
+(13, 32641555907183580, 1, 130000),
+(13, 38571604515647108, 1, 130000),
+(13, 46179260022088780, 1, 130000),
+(13, 50754869595063550, 1, 130000),
 (13, 52861222658251035, 1, 130000),
+(13, 56228909934804746, 1, 130000),
+(13, 63312718431400053, 1, 130000),
+(13, 81598341265511040, 1, 130000),
+(13, 88631953407886984, 1, 130000),
+(13, 92881667464773072, 1, 130000),
+(13, 95110858300696862, 1, 130000),
+(13, 98935113094891010, 1, 130000),
+(13, 102000630068059326, 1, 130000),
+(13, 141349892723167527, 1, 130000),
+(13, 150388176938589324, 1, 130000),
+(13, 155795668225711764, 1, 130000),
+(13, 156066633855692865, 1, 130000),
+(13, 171443970038392802, 1, 130000),
+(13, 175128987525392756, 1, 130000),
 (15, 7916005423390427, 1, 78000),
 (15, 52861222658251035, 1, 78000),
 (15, 152447728075946880, 1, 78000),
-(16, 116579538798324060, 1, 120000);
+(16, 26457241564692072, 1, 120000),
+(16, 29270104857428188, 1, 120000),
+(16, 38571604515647108, 1, 120000),
+(16, 102000630068059326, 1, 120000),
+(16, 107701074447936700, 1, 120000),
+(16, 116579538798324060, 1, 120000),
+(16, 150388176938589324, 1, 120000),
+(16, 171329665384231328, 1, 120000),
+(18, 3681538620652046, 1, 4000),
+(18, 12702907758616952, 1, 4000),
+(18, 26457241564692072, 1, 4000),
+(18, 29270104857428188, 1, 4000),
+(18, 32641555907183580, 1, 4000),
+(18, 38571604515647108, 1, 4000),
+(18, 46179260022088780, 1, 4000),
+(18, 50754869595063550, 1, 4000),
+(18, 56228909934804746, 1, 4000),
+(18, 63312718431400053, 1, 4000),
+(18, 81598341265511040, 1, 4000),
+(18, 88631953407886984, 1, 4000),
+(18, 92881667464773072, 1, 4000),
+(18, 95110858300696862, 1, 4000),
+(18, 98935113094891010, 1, 4000),
+(18, 102000630068059326, 1, 4000),
+(18, 150388176938589324, 1, 4000),
+(18, 155795668225711764, 1, 4000),
+(18, 156066633855692865, 1, 4000),
+(18, 171443970038392802, 1, 4000);
 
 -- --------------------------------------------------------
 
@@ -1290,7 +1529,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `quantity`, `parent_id`, `created
 (15, 'Thịt heo xay C.P 100g', 78000, 777, NULL, '2025-12-30 05:46:24', '2025-12-30 05:46:24', 'product_images/15/avatar.jpg', 1, 'Thịt heo xay C.P 100g', 10, 'simple', 0),
 (16, 'Cá hồi Coho cắt khúc nhập khẩu Chi Lê 200g (chỉ giao khúc giữa)', 120000, 111, NULL, '2025-12-30 05:47:17', '2025-12-30 07:05:40', 'product_images/16/avatar.jpg', 1, 'Cá hồi Coho cắt khúc nhập khẩu Chi Lê 200g (chỉ giao khúc giữa)', 10, 'simple', 0),
 (17, 'Rau mồng tơi 400gr', 12900, 222, NULL, '2025-12-30 05:48:12', '2025-12-30 05:48:12', 'product_images/17/avatar.jpg', 1, 'Rau mồng tơi 400gr', 9, 'simple', 0),
-(18, 'Cà chua 300g', 4000, 11, NULL, '2025-12-30 05:49:27', '2025-12-30 05:49:27', 'product_images/18/avatar.jpg', 1, 'Cà chua 300g', 9, 'simple', 0),
+(18, 'Cà chua 300g', 4000, 200, NULL, '2025-12-30 05:49:27', '2026-04-08 00:57:55', 'product_images/18/avatar.jpg', 1, 'Cà chua 300g', 9, 'simple', 0),
 (19, 'Thùng 24 bịch sữa dinh dưỡng ít đường Dutch Lady 180ml', 450000, 555, NULL, '2025-12-30 05:50:30', '2025-12-30 05:50:30', 'product_images/19/avatar.jpg', 1, 'Thùng 24 bịch sữa dinh dưỡng ít đường Dutch Lady 180ml', 12, 'simple', 0);
 
 -- --------------------------------------------------------
@@ -1328,7 +1567,6 @@ INSERT INTO `product_images` (`id`, `image`, `product_id`, `created_at`, `update
 (21, 'product_images/12/15678171396016.jpg', 12, '2025-11-26 14:59:28', NULL),
 (23, 'product_images/15/9902680364736.jpg', 15, '2025-12-30 05:46:24', NULL),
 (25, 'product_images/17/3288524140812.jpg', 17, '2025-12-30 05:48:12', NULL),
-(26, 'product_images/18/12602770106244.jpg', 18, '2025-12-30 05:49:27', NULL),
 (27, 'product_images/19/9595210896900.jpg', 19, '2025-12-30 05:50:30', NULL),
 (28, 'product_images/13/15468965472102.jpg', 13, '2025-12-30 05:52:43', NULL),
 (29, 'product_images/13/12388955554593.jpg', 13, '2025-12-30 05:52:43', NULL),
@@ -1390,7 +1628,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `address`, `phone`, `sta
 (5, 'Đỗ Anh Đài', 'doanhdaigr5.2004@gmail.com', '$2y$10$piofYvwvQCGXbfEtkQNYGON4OITwFGu6hzLb0mCxM91tXgAqlmrwq', NULL, NULL, 1, NULL, '2025-12-27 17:27:25', '2025-12-27 17:27:25'),
 (6, 'Đỗ Anh Đài', 'daido7881@gmail.com', '$2y$10$diYtGeL4RmiGMhkDrYJhh.HSBgikb6Hmb4GD/EKSfp9FXhAcAS03e', NULL, NULL, 1, NULL, '2025-12-29 10:30:53', '2025-12-29 10:30:53'),
 (7, 'demo098765', 'demo098765@gmail.com', '$2y$10$XI3gUc1HO1bmXe/BBIcgTuxutHH.rhXnpKPCTx/.Dh6c11qA6G3Om', NULL, NULL, 1, NULL, '2025-12-30 06:14:25', '2025-12-30 06:14:25'),
-(8, 'demo7788', 'demo7788@gmail.com', '$2y$10$VQMPeCUGbaHRz2umpKLrdOB7YZZ2xh5CMFi8zMo4bg5orC02Mb2Ke', NULL, NULL, 1, NULL, '2025-12-30 07:00:00', '2025-12-30 07:00:00');
+(8, 'demo7788', 'demo7788@gmail.com', '$2y$10$VQMPeCUGbaHRz2umpKLrdOB7YZZ2xh5CMFi8zMo4bg5orC02Mb2Ke', NULL, NULL, 1, NULL, '2025-12-30 07:00:00', '2025-12-30 07:00:00'),
+(9, 'Le Song Nhat Quyen', 'lesongnhatquyen@gmail.com', '$2y$10$/w/xsBnno3uKcaYhgmPNX.Qb.KyiNPV.ZIW2nCr7fId7ozOsaTmwK', NULL, NULL, 1, 'ZKvsjAcwkQjrK6ORAW9RP4GqIA2DPtixcFBXSt9Cmq7Ik9stVzbA1Cd1BtwW', '2026-03-04 06:55:20', '2026-03-04 06:55:20');
 
 -- --------------------------------------------------------
 
@@ -1570,7 +1809,7 @@ ALTER TABLE `values`
 -- AUTO_INCREMENT for table `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=651;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=797;
 
 --
 -- AUTO_INCREMENT for table `admins`
@@ -1588,7 +1827,7 @@ ALTER TABLE `admin_password_resets`
 -- AUTO_INCREMENT for table `ai_suggestions`
 --
 ALTER TABLE `ai_suggestions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `attributes`
@@ -1636,7 +1875,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152703778356786226;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175128987525392757;
 
 --
 -- AUTO_INCREMENT for table `password_resets`
@@ -1666,7 +1905,7 @@ ALTER TABLE `product_images`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
