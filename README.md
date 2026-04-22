@@ -22,7 +22,7 @@ Moi chang trong README nay deu ghi ro:
 | 3 | Storefront public cho nguoi dung | `php artisan test --filter=Stage03` -> `4 passed` |
 | 4 | User auth, profile, quen mat khau, social login | `php artisan test --filter=Stage04` -> `9 passed` |
 | 5 | Gio hang, checkout, don hang, thanh toan | `php artisan test --filter=Stage05` -> `7 passed` |
-| 6 | Tracking, analytics, AI dashboard va AI goi y | Chua tach suite `Stage06`; da doi chieu route/controller/service hien co |
+| 6 | Tracking, analytics, AI dashboard va AI goi y | `php artisan test --filter=Stage06` -> `8 passed` |
 
 ## 3. Cach toi chia 6 chang
 
@@ -558,9 +558,13 @@ Rang buoc:
 
 ### Ket qua kiem thu
 
-Trong repo hien tai, toi chua tach rieng mot suite `Stage06`.
+Toi da tach rieng suite `Stage06`.
 
-Ket qua xac minh hien co:
+Ket qua kiem thu:
+
+- `php artisan test --filter=Stage06` -> `8 passed`
+
+Noi dung da duoc kiem thu:
 
 - `ActivityTracker` da co cac ham `trackView`, `trackSearch`, `trackAddToCart`, `trackRemoveFromCart`, `trackPurchase`
 - `HomeController@search` da goi tracking search
@@ -577,18 +581,19 @@ Ket qua xac minh hien co:
 
 Trang thai kiem thu cua chang 6 trong README nay:
 
-- da xac minh ma nguon va luong service/controller
-- chua tach thanh `php artisan test --filter=Stage06`
+- da co suite test rieng cho tracking, analytics, AI dashboard, AI suggestion va command
 
 ## 10. Tong ket ket qua kiem thu hien co
 
-Toi da co kiem thu tu dong tach rieng cho 4 chang dau:
+Toi da co kiem thu tu dong tach rieng cho ca 6 chang:
 
 ```bash
 php artisan test --filter=Stage01
 php artisan test --filter=Stage02
 php artisan test --filter=Stage03
 php artisan test --filter=Stage04
+php artisan test --filter=Stage05
+php artisan test --filter=Stage06
 ```
 
 Ket qua da xac nhan:
@@ -597,11 +602,8 @@ Ket qua da xac nhan:
 - Stage02: `6 passed`
 - Stage03: `4 passed`
 - Stage04: `9 passed`
-
-Stage 5 va Stage 6 trong README nay dang o trang thai:
-
-- da doi chieu ma nguon, route, controller, service va migration hien co
-- chua duoc tach thanh 2 suite test doc lap rieng trong repo
+- Stage05: `7 passed`
+- Stage06: `8 passed`
 
 ## 11. Cach push GitHub theo 6 chang
 
@@ -621,10 +623,9 @@ Voi cach chia nay, README, bao cao do an va lich su GitHub se thong nhat voi nha
 Toi trinh bay du an nay thanh 6 chang vi day la cach gon hon, sat thuc te hon va de bao ve hon:
 
 - 4 chang dau da duoc tach slice rieng, co test tu dong va co endpoint stage ro rang
-- 2 chang cuoi gom cac luong nghiep vu lon cua san pham hien tai va da duoc doi chieu truc tiep tren codebase
+- 2 chang cuoi da duoc tach suite test rieng, bao phu luong mua hang va luong tracking/analytics/AI
 
 Neu can mo rong tiep, toi se uu tien lam them:
 
-- suite `Stage05`
-- suite `Stage06`
+- mo rong test Stage06 theo huong performance/load va fallback AI nang cao
 - tag GitHub theo dung 6 chang trong README nay
